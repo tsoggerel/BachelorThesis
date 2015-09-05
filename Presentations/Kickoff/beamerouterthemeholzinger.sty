@@ -1,0 +1,57 @@
+
+
+\defbeamertemplate*{headline}{holzinger theme}
+{
+%  \leavevmode%
+  \vskip2pt%
+  \hbox{%
+    \begin{tabular}[t]{c}
+      \begin{minipage}{0.96\paperwidth}
+      {        
+        \hspace*{1ex}
+        \begin{minipage}{0.7\paperwidth} %
+          \vspace*{-4ex}
+          \usebeamerfont{section in head/foot}\insertsectionhead
+        \end{minipage} %
+        \hfill %
+        \hspace*{-2ex}
+        \includegraphics[height=0.6cm]{config/logo.png}
+      }
+      \end{minipage}
+      \vspace*{2pt}
+      \\
+      \hline
+    \end{tabular}
+%   \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{subsection in head/foot}%
+%     \usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead
+%   \end{beamercolorbox}
+  }%
+}
+
+\defbeamertemplate*{footline}{holzinger theme}
+{
+%  \leavevmode%
+  \hbox{%
+%    \hspace*{2ex}
+    \begin{tabular}[t]{c}
+      \hline
+     \hspace*{-4ex}%
+     \begin{beamercolorbox}[wd=\paperwidth,center]{footer}
+     \hspace*{-2ex}%
+     \begin{beamercolorbox}[wd=0.31cm,ht=0.42cm,center]{author in head/foot}
+     \end{beamercolorbox}%
+     \vspace*{0.5ex}
+      \begin{minipage}{0.96\paperwidth}
+        \leavevmode              
+        % \epsfysize = 0.5cm
+        % \epsffile{quadrat.ps}
+        \vspace*{0.5ex}                                             
+        { \usebeamerfont{author in head/foot}\insertshortauthor \hfill %
+          \usebeamerfont{pagenum in head/foot}\insertframenumber{} / \inserttotalframenumber \hfill
+          \usebeamerfont{date in head/foot}\insertshortdate{}} %
+      \end{minipage}
+    \end{beamercolorbox}
+    \end{tabular}%
+  }%
+  \vskip0pt%
+}

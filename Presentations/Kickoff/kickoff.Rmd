@@ -1,0 +1,86 @@
+---
+title: "Title of the Bachelor Thesis"
+subtitle: "Kickoff for Bachelor Thesis"
+author: "Zolbayasakh Tsoggerel"
+authorshort: z.tsoggerel@hci-kdd.org
+date: "Graz, April 14, 2015"
+output:
+  beamer_presentation:
+    colortheme: holzinger
+    fig_caption: yes
+    fonttheme: professionalfonts
+    highlight: tango
+    keep_tex: yes
+    pandoc_args:
+    - --listings
+    - --biblatex
+    slide_level: 2
+    template: config/template.beamer
+    theme: holzinger
+    toc: no
+csl: config/elsevier-harvard.csl
+bibliography: references.bib
+address: Holzinger Group - hci-kdd.org
+---
+```{r, include=FALSE}
+source('config/knitr-settings.R')
+```
+
+# You type a title like this
+
+<!-- if there is no subtitle you need write "----" to start a slide -->
+
+----
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+# You can also include static images (don't forget to reference the source)
+
+----
+
+!["Significant" - [http://xkcd.com/882/](http://xkcd.com/882/)](images/jellybeans3.png)
+
+# R Markdown 2
+
+## Slide with Bullets
+
+- Bullet 1
+
+- Bullet 2
+
+- Bullet 3
+
+## Slide with some references
+
+<!-- note that references will only be included if you run the ./buildSlides script -->
+<!-- The @reference references need to be in the references.bib file -->
+
+**The DUKE saga** [^starter]: *"Genomic signatures to guide the use of chemotherapeutics"*
+
+- Flawed data analysis by Potti *et al.*[@potti2006genomic] 
+    
+- Made it into clinical trials!
+    
+- Baggerly and Coombes[@baggerly2009deriving] were the researches that 
+  spotted the flaw
+
+[^starter]: http://simplystatistics.org/2012/02/27/the-duke-saga-starter-set/
+
+# Slide with R Code and Output
+
+----
+
+```{r, results='asis'}
+pander(head(mtcars[,1:6]))
+```
+
+# Slide with an R Plot and hidden code
+
+----
+
+```{r examplePlot, echo=FALSE, fig.cap="This is my figure"}
+qplot(speed, dist, data = cars) + geom_smooth(method="lm")
+```
+

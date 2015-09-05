@@ -1,0 +1,38 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+
+% Settings
+\useinnertheme{holzinger}
+\useoutertheme{holzinger}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\setbeamerfont{block title}{size={}}
+\setbeamerfont{author in head/foot}{series=\bfseries}
+\setbeamerfont{date in head/foot}{series=\bfseries}
+\setbeamerfont{title}{size*={18}{18},series=\bfseries}
+\setbeamerfont{title in head/foot}{series=\bfseries}
+\setbeamerfont{section in head/foot}{size*={10}{0},series=\bfseries}
+\setbeamerfont{pagenum in head/foot}{size*={5}{0}}
+\setbeamerfont{subtitle}{series=\bfseries}
+\setbeamerfont{author}{series=\bfseries}
+\setbeamerfont{institute}{series=\bfseries}
+
+\setbeamersize{text margin left=1.0cm}
+\setbeamersize{text margin right=1.0cm}
+\setbeamertemplate{items}[square]
+
+\setbeamertemplate{frametitle}
+{
+  \begin{centering}
+    \insertframetitle \\ \small \insertframesubtitle \par
+  \end{centering}
+}
+
+\mode<all>
